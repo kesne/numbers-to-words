@@ -30,7 +30,7 @@ describe('intiger#number') do
 
   it("returns a written-word version of the intiger") do
     number = Number.new(6789)
-    expect(number.to_eng).to(eq("six thousand seven hundred eighty nine"))
+    expect(number.to_eng).to(eq("six thousand, seven hundred eighty nine"))
   end
 
 end
