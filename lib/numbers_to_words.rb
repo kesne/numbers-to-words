@@ -13,7 +13,7 @@ class Number
     def to_eng(i = (@digits.length - 1))
         return "zero" if @number == 0
         temp = to_hundred(i)
-        ((i == 0) ? (temp) : (temp + to_eng(i - 1))).gsub(/\s+\z/, "")
+        ((i == 0) ? (temp) : (temp + to_eng(i - 1))).gsub(/,\s+\z/, "").gsub("  ", " ")
     end
 
     def to_hundred(i)
@@ -52,7 +52,7 @@ class Number
 
 end
 
-number = Number.new(9000300800070006)
+number = Number.new(1123456789098765)
 puts number.to_eng
 
 
